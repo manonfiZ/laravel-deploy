@@ -55,7 +55,7 @@
                                             <li><a href="service-details.html">Service Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Nous contacter</a>
+                                    <li><a href="{{ route('contact') }}">Nous contacter</a>
                                     </li>
                                 </ul>
                             </div>

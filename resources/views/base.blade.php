@@ -114,7 +114,7 @@
     <script src="{{ asset('js/slider-active.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/wow.js') }}"></script>
-    <script src="{{ asset('js/validation.js') }}"></script>
+    {{-- <script src="{{ asset('js/validation.js') }}"></script> --}}
     <script src="{{ asset('js/jquery-ui.js') }}"></script>
     <script src="{{ asset('js/bxslider.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/SmoothScroll.js') }}"></script>

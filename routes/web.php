@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WebController::class, 'index'])->name('index');
 Route::get('/about', [WebController::class, 'about'])->name('about');
+Route::get('/contact', [WebController::class, 'contact'])->name('contact');
+Route::post('/contact', [WebController::class, 'contactForm'])->name('contact-post');

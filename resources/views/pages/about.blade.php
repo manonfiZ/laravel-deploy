@@ -1,24 +1,7 @@
 @extends('base')
 
 @section('content')
-    <!-- page title -->
-    <div class="about-bg centered">
-        <div class="container">
-            <div class="text">About Us</div>
-        </div>
-    </div>
-    <!-- end page title -->
-
-    <!-- bread-crumb -->
-    <div class="bread-crumb">
-        <div class="container">
-            <div class="text"><a href="index.html">Home</a><i class="fa fa-angle-right"></i> About us
-            <div class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</div>
-            </div>
-        </div>
-    </div>
-    <!-- bread crumb end -->
-
+    <x-breadcrumb pageTitle='À propos'></x-breadcrumb>
 
     <!-- about section -->
     <section class="about-section sec-pad">
