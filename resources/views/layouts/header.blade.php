@@ -6,10 +6,12 @@
         $indexClass = '';
         $contactClass = '';
         $aboutClass = '';
+        $serviceClass = '';
 
         if ($currentRoute == 'index') $indexClass = 'current';
         if ($currentRoute == 'contact') $contactClass = 'current';
         if ($currentRoute == 'about') $aboutClass = 'current';
+        if ($currentRoute == 'services') $serviceClass = 'current';
 
     @endphp
 
@@ -17,12 +19,12 @@
     <div class="header-upper">
         <div class="container">
             <ul class="top-left">
-                <li><i class="fa fa-clock-o" aria-hidden="true"></i>IFU: 3202011942887</li>
-                <li><i class="fa fa-phone"></i>RCCM: RB/COT/20 B 27999</li>
+                <li><i class="fa fa-clock-o_" aria-hidden="true"></i>IFU: 3202011942887</li>
+                <li><i class="fa fa-phone_"></i>RCCM: RB/COT/20 B 27999</li>
             </ul>
             <div class="top-right">
                 <ul class="social-top">
-                    <li><a href="tel:0022995401122"><i class="fa fa-phone"> (+229) 95 40 11 22</i></a></li>
+                    <li><a href="tel:0022995401122" style="font-size: 15px; font-weight: 600"><i class="fa fa-phone" style="margin-right: 5px"></i> (+229) 95 40 11 22</a></li>
                 </ul>
                 <div class="button-top">
                     <a href="#" class="btn-one style-one">Prendre rendez-vous</a>
@@ -57,12 +59,15 @@
                                     </li>
                                     <li class="{{$aboutClass}}"><a href="{{ route('about') }}">À propos de nous</a>
                                     </li>
-                                    <li class="dropdown"><a href="#">Nos services</a>
+                                    
+                                    <li class="{{$serviceClass}}"><a href="{{ route('services') }}">Nos services</a>
+                                    </li>
+                                    {{-- <li class="dropdown"><a href="#">Nos services</a>
                                         <ul>
                                             <li><a href="service.html">Our Service</a></li>
                                             <li><a href="service-details.html">Service Details</a></li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
                                     <li class="{{$contactClass}}"><a href="{{ route('contact') }}">Nous contacter</a>
                                     </li>
                                 </ul>
@@ -100,11 +105,7 @@
                                     </li>
                                     <li class="{{$aboutClass}}"><a href="{{ route('about') }}">À propos de nous</a>
                                     </li>
-                                    <li class="dropdown"><a href="#">Nos services</a>
-                                        <ul>
-                                            <li><a href="service.html">Our Service</a></li>
-                                            <li><a href="service-details.html">Service Details</a></li>
-                                        </ul>
+                                    <li class="{{$serviceClass}}"><a href="{{ route('services') }}">Nos services</a>
                                     </li>
                                     <li class="{{$contactClass}}"><a href="{{route('contact')}}">Nous contacter</a>
                                     </li>

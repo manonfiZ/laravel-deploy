@@ -75,23 +75,6 @@
                         </form>
                     </div>
                 </div>
-                {{-- <div class="col-md-6 col-sm-12 col-xs-12 contact-colmun">
-                    <div class="google-map-area">
-                        <div 
-                            class="google-map" 
-                            id="contact-google-map" 
-                            data-map-lat="41.641264" 
-                            data-map-lng="19.705595" 
-                            data-icon-path="images/resources/map-marker.png" 
-                            data-map-title="Brooklyn, New York, United Kingdom" 
-                            data-map-zoom="12" 
-                            data-markers='{
-                                "marker-1": [41.641264, 19.705595, "<h4>Branch Office</h4><p>77/99 London UK</p>","images/resources/map-marker.png"]
-                            }'>
-
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </section>
