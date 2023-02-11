@@ -97,26 +97,18 @@
             </div>
         </div>
     </section>
-
-
-
     <!--End pagewrapper-->
-
 
     <!--Scroll to top-->
     <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span>
     </div>
 
-
     <!--jquery js -->
-
-
     <script type="text/javascript" src="{{ asset('js/jquery-2.1.4.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/slider-active.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/wow.js') }}"></script>
-    {{-- <script src="{{ asset('js/validation.js') }}"></script> --}}
     <script src="{{ asset('js/jquery-ui.js') }}"></script>
     <script src="{{ asset('js/bxslider.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/SmoothScroll.js') }}"></script>
