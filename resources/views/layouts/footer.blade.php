@@ -5,16 +5,15 @@
             <div class="col-md-4 col-sm-6 col-xs-12 footer-colmun">
                 <div class="logo-widget footer-widget">
                     <div class="footer-logo">
-                        <a href="index.html"></a>
+                        <a href="{{ route('index') }}"> <img src="{{ asset('images/logo/logo.png')}}" alt="logo"></a>
                     </div>
                     <div class="text">
-                        <p>Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt ut labore dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullam
-                        aboris nisi ut aliquip.</p>
+                        <p>Spécialiste dans la fourniture de solutions de qualité supérieure, abordables et fiables pour les entreprises, grâce à une expertise et une expérience solides dans plusieurs domaines. </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 footer-colmun">
-                <div class="service-widget footer-widget">
+            <div class="col-md-2 col-sm-6 col-xs-12 footer-colmun">
+                {{-- <div class="service-widget footer-widget">
                     <div class="footer-title"><h4>Services</h4></div>
                     <ul class="list">
                         <li><a href="#">Company History</a></li>
@@ -23,9 +22,9 @@
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
-            <div class="col-md-2 col-sm-6 col-xs-12 footer-colmun">
+            <div class="col-md-3 col-sm-6 col-xs-12 footer-colmun">
                 <div class="link-widget footer-widget">
                     <div class="footer-title"><h4>Liens</h4></div>
                     <ul class="list">

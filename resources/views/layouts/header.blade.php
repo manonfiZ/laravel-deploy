@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-12 col-xs-12">
                     <div class="logo-box">
-                        <a href="{{ route('index') }}"></a>
+                        <a href="{{ route('index') }}"> <img src="{{ asset('images/logo/logo.png')}}" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-12 col-xs-12">
@@ -86,7 +86,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-12 col-xs-12">
                     <div class="logo-box">
-                        <a href="index.html"></a>
+                        <a href="{{ route('index') }}"> <img src="{{ asset('images/logo/logo.png')}}" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-12 col-xs-12">

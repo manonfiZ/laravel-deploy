@@ -46,7 +46,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12 contact-colmun">
                     <div class="contact-form-area">
                         <div class="title"><h2>Ecrivez-nous</h2></div>
-                        <div class="text"><p>Voulez-vous prendre rendez-vous, avez-vous une préocupation? écrivez nous, nous vous répondrons dans un bref delai.</p></div>
+                        <div class="text"><p>Voulez-vous prendre rendez-vous, avez-vous une préoccupation? écrivez nous, nous vous répondrons dans un bref delai.</p></div>
                         @if (Session::has('message'))
                             <span class="alert alert-{{ Session::get('type') }}">
                                 {{  Session::get('message') }}

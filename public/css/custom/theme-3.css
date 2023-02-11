@@ -28,7 +28,7 @@ just change the color code  and rgba value. The whole theme color will be change
 .main-menu .navbar-header .navbar-toggle .icon-bar,.scroll-to-top,.header-search button
 
  {
-	background: #48c7ec;
+	background: #126bff;
 }
 
 
@@ -55,7 +55,7 @@ li:first-child,h5 a:hover, h6 a:hover, h4 a:hover, h4 a:hover,.main-footer .link
 .icon-box i:before
 
 {
-	color:#48c7ec;
+	color:#126bff;
 }
 /* Filter the 'border color' value classes*/
 
@@ -68,7 +68,7 @@ li:first-child,h5 a:hover, h6 a:hover, h4 a:hover, h4 a:hover,.main-footer .link
 .header-search .search input[type="text"], .header-search input[type="search"],.header-search button
 
 {
-	border-color:#48c7ec;
+	border-color:#126bff;
 }
 
 
@@ -76,9 +76,9 @@ li:first-child,h5 a:hover, h6 a:hover, h4 a:hover, h4 a:hover,.main-footer .link
 /* change the theme logo for your own color schemes */
 
 .logo-box {
-	background: url(../../images/logo/logo2.png) no-repeat 9% 100%;
+	/* background: url(../../images/logo/logo2.png) no-repeat 9% 100%; */
 }
 
 .footer-logo{
-  background: url(../../images/footer/logo2.png) no-repeat 9% 100%;
+  /* background: url(../../images/footer/logo2.png) no-repeat 9% 100%; */
 }

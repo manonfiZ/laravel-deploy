@@ -11,10 +11,29 @@
     </title>
 
     <!-- Stylesheets -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" id="jssDefault" href="{{ asset('css/custom/theme-2.css') }}" />
-    <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" id="jssDefault" href="{{ asset('css/custom/theme-3.css') }}" />
+    <link rel="icon" href="{{ asset('images/logo/logo.png') }}" type="image/x-icon">
+
+    {{-- Principal --}}
+    <meta name="description" content="{{config('app.name')}} est une entreprise spécialisée dans la fourniture de solutions de qualité supérieure, abordables et fiables pour les entreprises, grâce à une expertise et une expérience solides dans plusieurs domaines">
+    <meta name="title" content="Bienvenue sur {{config('app.name')}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{config('app.url')}}">
+    <meta property="og:title" content="Bienvenue sur {{config('app.name')}}">
+    <meta property="og:description" content="{{config('app.name')}} est une entreprise spécialisée dans la fourniture de solutions de qualité supérieure, abordables et fiables pour les entreprises, grâce à une expertise et une expérience solides dans plusieurs domaines">
+    <meta property="og:image" content="{{asset('images/logo/logo.png')}}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{config('app.url')}}">
+    <meta property="twitter:title" content="Bienvenue sur {{config('app.name')}}">
+    <meta property="twitter:description" content="{{config('app.name')}} est une entreprise spécialisée dans la fourniture de solutions de qualité supérieure, abordables et fiables pour les entreprises, grâce à une expertise et une expérience solides dans plusieurs domaines">
+    <meta property="twitter:image" content="{{asset('images/logo/logo.png')}}">
 
 </head>
 
@@ -25,45 +44,6 @@
     <!-- .preloader -->
     <div class="preloader"></div>
     <!-- /.preloader -->
-
-    <!-- switcher menu -->
-    <div class="switcher">
-
-        <!-- Switcher button -->
-        <div class="switch_btn">
-            <button><i class="fa fa-cog fa-spin"></i></button>
-        </div>
-
-        <!-- switcher body -->
-        <div class="switch_menu">
-            <h5 class="title">Style Switcher</h5>
-
-
-            <!-- color changer -->
-            <div class="switcher_container">
-                <h5>Color Skins</h5>
-                <ul id="styleOptions" title="switch styling">
-                    <li>
-                        <a href="javascript: void(0)" data-theme="theme-1" class="color2"></a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0)" data-theme="theme-3" class="color3"></a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0)" data-theme="theme-4" class="color4"></a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0)" data-theme="theme-5" class="color5"></a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0)" data-theme="theme-6" class="color6"></a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-    <!-- end switcher menu -->
 
     <!--header search-->
     <section class="header-search">

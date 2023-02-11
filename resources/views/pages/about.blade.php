@@ -12,23 +12,44 @@
     <section class="about-section sec-pad">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12 about-colmun">
+                <div class="col-md-12 col-sm-12 col-xs-12 about-colmun">
                     <div class="about-content">
                         <div class="about-title">
-                            <div class="section-title"><h2>About The Biznes</h2></div>
+                            <div class="section-title"><h2>Qui sommes-nous ?</h2></div>
                             <div class="title-text"></div>
                         </div>
-                        <div class="text"><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium.</p></div>
-                        <ul class="list">
-                            <li>Morbi fermentum felis nec</li>
-                            <li> Morbi fermentum felis nec gravida tempus.</li>
-                            <li>Morbi fermentum felis nec gravida</li>
-                        </ul>
-                        <div class="text"><p>Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae.</p></div>
+                        <div class="text row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 about-colmun">
+                                <p>
+                                    {{ config('app.name') }}, une entreprise en pleine croissance offrant une large gamme de solutions pour les besoins de votre entreprise. Fondée sur des valeurs de qualité, de fiabilité et de satisfaction du client, notre entreprise est déterminée à fournir des produits et des services de la plus haute qualité pour répondre aux besoins de notre clientèle.
+                                </p>
+                                <p>En tant qu’entreprise de vente d’équipement de bureau, nous proposons une large gamme de produits allant des fournitures de bureau classiques aux équipements de haute technologie pour les entreprises modernes. Nous comprenons l’importance de l’efficacité et de la productivité pour les entreprises et nous nous efforçons de fournir des équipements qui peuvent les aider à atteindre leurs objectifs.</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 about-colmun">
+                                <div class="img-box"><figure><img src="images/about/1.jpg" alt=""></figure></div>
+                            </div>
+                        </div>
+                        <br> <br>
+                        <div class="text row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 about-colmun">
+                                <div class="img-box"><figure><img src="images/about/1.jpg" alt=""></figure></div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 about-colmun">
+                                <p>En outre, notre entreprise est également spécialisée dans les solutions d’assainissement. Nous proposons des produits écologiques et durables pour vous aider à maintenir un environnement sain et propre dans votre entreprise. Nous sommes conscients de l’impact de l’environnement sur la santé des employés et sur l’efficacité de votre entreprise, et nous sommes là pour vous aider à gérer cet aspect important.</p>
+                                <p>{{ config('app.name') }} est également un leader dans les services informatiques. Nous offrons des solutions pour vous aider à gérer et à optimiser vos systèmes informatiques, ainsi que des services de soutien pour vous aider à résoudre rapidement tout problème technique. Nous savons que la technologie peut être complexe, mais nous sommes là pour vous aider à la maîtriser.</p>
+                            </div>
+                        </div>
+                        <br> <br>
+                        <div class="text row d-flex justify-content-center align-items-center">
+                            <div class="col-md-6 col-sm-6 col-xs-12 about-colmun">
+                                <p>Enfin, nous proposons également des services d’audit pour vous aider à évaluer la performance de votre entreprise et à identifier les opportunités d’amélioration. Nous croyons que les entreprises doivent être en mesure de se mesurer régulièrement pour évoluer et prospérer, et nous sommes là pour vous aider à le faire.</p>
+                                <p>En conclusion, chez {{ config('app.name') }}, nous sommes fiers de fournir des solutions de qualité supérieure pour répondre à tous les besoins de votre entreprise. Nous sommes engagés à vous aider à réussir et à atteindre vos objectifs. Contactez-nous dès aujourd’hui pour découvrir comment nous pouvons vous aider.</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 about-colmun">
+                                <div class="img-box"><figure><img src="images/about/1.jpg" alt=""></figure></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 about-colmun">
-                    <div class="img-box"><figure><img src="images/about/1.jpg" alt=""></figure></div>
                 </div>
             </div>
         </div>
@@ -36,213 +57,40 @@
     <!-- about section end -->
 
 
-    <!-- service section -->
-    <section class="service-section">
-        <div class="container-fullid">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-sm-12 service-colmun">
-                    <div class="service-title">
-                        <div class="sec-title"><h2>Our <span>Services</span></h2></div>
-                        <div class="text"><p>Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit sed do eiusm temp or incididunt</p></div>
-                    </div>
+   <!-- service section -->
+   <section class="service-section">
+    <div class="container-fullid">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-sm-12 service-colmun">
+                <div class="service-title">
+                    <div class="sec-title"><h2>Nos <span>Services</span></h2></div>
+                    <div class="text"><p>{{config('app.name')}} fournit plusieurs types de service allant de fourniture
+                        de matériels de bureau à l'assainissement</p></div>
                 </div>
-                <div class="col-md-9 col-sm-12 col-xs-12 service-colmun">
-                    <div class="three-column-carousel">
-                        <div class="single-item">
-                            <div class="icon-box"><a href="service-details.html"><i class="flaticon-remove"></i></a></div>
-                            <h4><a href="service-details.html">Business Growth</a></h4>
-                            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor inc
-                            ididunt ut labore</p></div>
-                        </div>
-                        <div class="single-item">
-                            <div class="icon-box"><a href="service-details.html"><i class="flaticon-remove"></i></a></div>
-                            <h4><a href="service-details.html">Business Growth</a></h4>
-                            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor inc
-                            ididunt ut labore</p></div>
-                        </div>
-                        <div class="single-item">
-                            <div class="icon-box"><a href="service-details.html"><i class="flaticon-remove"></i></a></div>
-                            <h4><a href="service-details.html">Business Growth</a></h4>
-                            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor inc
-                            ididunt ut labore</p></div>
-                        </div>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12 service-colmun">
+                <div class="three-column-carousel">
+                    <div class="single-item">
+                        <div class="icon-box"><a href="#"><i class="flaticon-graph"></i></a></div>
+                        <h4><a href="{{ route('services')}}">Transport de marchandise et autres</a></h4>
+                        <div class="text"><p>Avec notre équipe, nous vous garantissons, la sureté et
+                            la livraison dans un bref délais</p></div>
+                    </div>
+                    <div class="single-item">
+                        <div class="icon-box"><a href="#"><i class="flaticon-people"></i></a></div>
+                        <h4><a href="{{ route('services')}}">Entretien et nettoyage des batiments et espaces verts</a></h4>
+                        <div class="text"><p>Confiez-nous vos espaces à aménager et nous les rendons propres.</p></div>
+                    </div>
+                    <div class="single-item">
+                        <div class="icon-box"><a href="#"><i class="flaticon-suitcase"></i></a></div>
+                        <h4><a href="{{ route('services')}}">Traveaux de dératisation, désinsectisation, désinfection et désodorisant</a></h4>
+                        <div class="text"><p>Pour un hygiène dans vos maisons, entreprises et autres, nous vous garantissons un travail efficace.</p></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- feature section end -->
+    </div>
+</section>
+<!-- feature section end -->
 
-    <!-- team section -->
-    {{-- <section class="our-team sec-pad">
-        <div class="container">
-            <div class="team-title centered">
-                <div class="section-title"><h2>Our Experts</h2></div>
-                <div class="title-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp </p></div>
-            </div>
-            <div class="row">
-                <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 team-colmun">
-                    <div class="bxslider ">
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5 col-xs-12 team-colmun">
-                                <div class="clearfix">
-                                    <figure class="img-box pull-left">
-                                        <a href="team.html"><img src="images/team/1.jpg" alt=""></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="col-md-7 col-sm-7 col-xs-12 team-colmun">
-                                <div class="team-content">
-                                    <div class="team-info">
-                                        <div class="team-text"><a href="team.html">Mark Richardson</a></div>
-                                        <span>Project Manager</span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Excepteur sint occaecat cupidatat  proident sunt culpa qui officia deserunt mollit an
-                                        imlab rum. Sed perspiciatis unde omnis is natus error sit voluptatem accusantium dolore mque laudant totam rem aperiam.</p>
-                                    </div>
-                                    <div class="team-contact">
-                                        <div class="text"><strong>Phone:</strong>&nbsp; &nbsp;(+1) 251-235-3256</div>
-                                        <div class="text"><strong>Email:</strong>&nbsp; &nbsp;info@tonybrown.com</div>
-                                    </div>
-                                    <ul class="team-social">
-                                        <li><a href="#" class="active"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5 col-xs-12 team-colmun">
-                                <div class="clearfix">
-                                    <figure class="img-box pull-left">
-                                        <a href="team.html"><img src="images/team/2.jpg" alt=""></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="col-md-7 col-sm-7 col-xs-12 team-colmun">
-                                <div class="team-content">
-                                    <div class="team-info">
-                                        <div class="team-text"><a href="team.html">Robat Jsion</a></div>
-                                        <span>Project Controlar</span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Excepteur sint occaecat cupidatat  proident sunt culpa qui officia deserunt mollit an
-                                        imlab rum. Sed perspiciatis unde omnis is natus error sit voluptatem accusantium dolore mque laudant totam rem aperiam.</p>
-                                    </div>
-                                    <div class="team-contact">
-                                        <div class="text"><strong>Phone:</strong>&nbsp; &nbsp;(+1) 251-235-3256</div>
-                                        <div class="text"><strong>Email:</strong>&nbsp; &nbsp;info@tonybrown.com</div>
-                                    </div>
-                                    <ul class="team-social">
-                                        <li><a href="#" class="active"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5 col-xs-12 team-colmun">
-                                <div class="clearfix">
-                                    <figure class="img-box pull-left">
-                                        <a href="team.html"><img src="images/team/3.jpg" alt=""></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="col-md-7 col-sm-7 col-xs-12 team-colmun">
-                                <div class="team-content">
-                                    <div class="team-info">
-                                        <div class="team-text"><a href="team.html">Julia Richardson</a></div>
-                                        <span>Advisor</span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Excepteur sint occaecat cupidatat  proident sunt culpa qui officia deserunt mollit an
-                                        imlab rum. Sed perspiciatis unde omnis is natus error sit voluptatem accusantium dolore mque laudant totam rem aperiam.</p>
-                                    </div>
-                                    <div class="team-contact">
-                                        <div class="text"><strong>Phone:</strong>&nbsp; &nbsp;(+1) 251-235-3256</div>
-                                        <div class="text"><strong>Email:</strong>&nbsp; &nbsp;info@tonybrown.com</div>
-                                    </div>
-                                    <ul class="team-social">
-                                        <li><a href="#" class="active"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5 col-xs-12 team-colmun">
-                                <div class="clearfix">
-                                    <figure class="img-box pull-left">
-                                        <a href="team.html"><img src="images/team/4.jpg" alt=""></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="col-md-7 col-sm-7 col-xs-12 team-colmun">
-                                <div class="team-content">
-                                    <div class="team-info">
-                                        <div class="team-text"><a href="team.html">Mitchel Mandal</a></div>
-                                        <span>Senior Manager</span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Excepteur sint occaecat cupidatat  proident sunt culpa qui officia deserunt mollit an
-                                        imlab rum. Sed perspiciatis unde omnis is natus error sit voluptatem accusantium dolore mque laudant totam rem aperiam.</p>
-                                    </div>
-                                    <div class="team-contact">
-                                        <div class="text"><strong>Phone:</strong>&nbsp; &nbsp;(+1) 251-235-3256</div>
-                                        <div class="text"><strong>Email:</strong>&nbsp; &nbsp;info@tonybrown.com</div>
-                                    </div>
-                                    <ul class="team-social">
-                                        <li><a href="#" class="active"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-pager">
-                        <div class="center">
-                            <ul class="nav-link list-inline">
-                                <li id="slider-prev"></li>
-                                <li id="slider-next"></li>
-                            </ul>  
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 team-colmun">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="slider-pager">
-                                <ul class="list-inline thumb-box style2">
-                                    <li>
-                                        <a class="active" data-slide-index="0" href="#"><figure><img src="images/team/1.png" alt=""></figure></a>
-                                    </li>
-                                    <li>
-                                        <a data-slide-index="1" href="#"><figure><img src="images/team/2.png" alt=""></figure></a>
-                                    </li>
-                                    <li>
-                                        <a data-slide-index="2" href="#"><figure><img src="images/team/3.png" alt=""></figure></a>
-                                    </li>
-                                    <li>
-                                        <a data-slide-index="3" href="#"><figure><img src="images/team/4.png" alt=""></figure></a>
-                                    </li>
-                                </ul>
-                            </div>  
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- team section end -->
 @endsection
