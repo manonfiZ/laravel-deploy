@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The Biznes | Responsive HTML 5 Template</title>
+    <title>
+        @yield('pageTitle') | {{ config('app.name') }}
+    </title>
 
     <!-- Stylesheets -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -91,7 +93,7 @@
     <section class="footer-bottom centered">
         <div class="container">
             <div class="copyright">
-                <p><a href="#">Thebiznes</a> Copyright © 2018 All Right Reserved</p>
+                <p><a href="#"> {{ config('app.name') }}</a> Copyright {{date('Y')}} Tous droits reservés</p>
             </div>
         </div>
     </section>

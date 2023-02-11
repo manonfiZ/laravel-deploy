@@ -22,8 +22,8 @@ class WebController extends Controller
     }
 
     public function contactForm(MessageRequest $request) {
-        Mail::send(new NewMessage($request->all()));
         try {
+            Mail::send(new NewMessage($request->all()));
         } catch (\Throwable $th) {
             return redirect(route('contact'))->with([
                 'message'=> 'Une erreur est survenue lors de l\'envoie de votre message',

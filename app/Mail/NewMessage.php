@@ -33,7 +33,7 @@ class NewMessage extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Nouveau message | Site AK-EMINENCE',
+            subject: 'Nouveau message | ' . config('app.name'),
             from: new Address(config('mail.from.address'), config('mail.from.name')),
             to: ['admin@contact.com'],
         );

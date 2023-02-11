@@ -1,5 +1,9 @@
 @extends('base')
 
+@section('pageTitle')
+    Acceuil
+@endsection
+
 @section('content')
      <!-- main slider -->
      <section class="example main-slider">

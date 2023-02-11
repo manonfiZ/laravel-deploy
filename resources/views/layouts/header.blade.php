@@ -1,20 +1,28 @@
 <!-- main header area -->
 <header class="main-header">
 
+    @php
+        $currentRoute = Route::currentRouteName();
+        $indexClass = '';
+        $contactClass = '';
+        $aboutClass = '';
+
+        if ($currentRoute == 'index') $indexClass = 'current';
+        if ($currentRoute == 'contact') $contactClass = 'current';
+        if ($currentRoute == 'about') $aboutClass = 'current';
+
+    @endphp
+
     <!-- header upper -->
     <div class="header-upper">
         <div class="container">
             <ul class="top-left">
-                <li><i class="fa fa-clock-o" aria-hidden="true"></i>Mon - Sat  9.00 - 18.00</li>
-                <li><i class="fa fa-phone"></i>[251] 235-3256</li>
+                <li><i class="fa fa-clock-o" aria-hidden="true"></i>IFU: 3202011942887</li>
+                <li><i class="fa fa-phone"></i>RCCM: RB/COT/20 B 27999</li>
             </ul>
             <div class="top-right">
                 <ul class="social-top">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                    <li><a href="tel:0022995401122"><i class="fa fa-phone"> (+229) 95 40 11 22</i></a></li>
                 </ul>
                 <div class="button-top">
                     <a href="#" class="btn-one style-one">Prendre rendez-vous</a>
@@ -45,9 +53,9 @@
                             </div>
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li class="current"><a href="{{ route('index') }}">Accueil</a>
+                                    <li class="{{$indexClass}}"><a href="{{ route('index') }}">Accueil</a>
                                     </li>
-                                    <li><a href="{{ route('about') }}">À propos de nous</a>
+                                    <li class="{{$aboutClass}}"><a href="{{ route('about') }}">À propos de nous</a>
                                     </li>
                                     <li class="dropdown"><a href="#">Nos services</a>
                                         <ul>
@@ -55,7 +63,7 @@
                                             <li><a href="service-details.html">Service Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ route('contact') }}">Nous contacter</a>
+                                    <li class="{{$contactClass}}"><a href="{{ route('contact') }}">Nous contacter</a>
                                     </li>
                                 </ul>
                             </div>
@@ -88,9 +96,9 @@
                             </div>
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li class="current"><a href="{{ route('index') }}">Accueil</a>
+                                    <li class="{{$indexClass}}"><a href="{{ route('index') }}">Accueil</a>
                                     </li>
-                                    <li><a href="{{ route('about') }}">À propos de nous</a>
+                                    <li class="{{$aboutClass}}"><a href="{{ route('about') }}">À propos de nous</a>
                                     </li>
                                     <li class="dropdown"><a href="#">Nos services</a>
                                         <ul>
@@ -98,7 +106,7 @@
                                             <li><a href="service-details.html">Service Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Nous contacter</a>
+                                    <li class="{{$contactClass}}"><a href="{{route('contact')}}">Nous contacter</a>
                                     </li>
                                 </ul>
                             </div>

@@ -1,5 +1,9 @@
 @extends('base')
 
+@section('pageTitle')
+    Nous contacter
+@endsection
+
 @section('content')
 
     <x-breadcrumb pageTitle='Nous contacter'></x-breadcrumb>
@@ -13,21 +17,21 @@
                     <div class="single-item hvr-float-shadow">
                         <div class="icon-box"><i class="fa fa-map-marker"></i></div>
                         <div class="title">Localisation</div>
-                        <div class="text"><p>Cotonou, Sainte Rita</p></div>
+                        <div class="text"><p>Siège Vodjè, îlot 704, Cotonou</p></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 contact-colmun">
                     <div class="single-item hvr-float-shadow">
                         <div class="icon-box"><i class="fa fa-phone"></i></div>
                         <div class="title">Téléphone</div>
-                        <div class="text"><p>(+48) 564-334-21-22-34<br /> (+48) 564-334-21-22-38</p></div>
+                        <div class="text"><p>(+229) 95 40 11 22</p></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 contact-colmun">
                     <div class="single-item hvr-float-shadow">
                         <div class="icon-box"><i class="fa fa-envelope"></i></div>
                         <div class="title">Email</div>
-                        <div class="text"><p><a href="#">info@templatepath.com</a><br /><a href="#">info@aventex.com</a></p></div>
+                        <div class="text"><p><a href="mailto:eminencegroup95@gmail.com">eminencegroup95@gmail.com</a></p></div>
                     </div>
                 </div>
             </div>
@@ -58,7 +62,7 @@
                                     <input type="email" name="email" value="" placeholder="Votre email" required>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="phone" value="" placeholder="Phone">
+                                    <input type="text" name="phone" value="" placeholder="Votre numéro de téléphone">
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="subject" value="" placeholder="L'objet de votre message" required>
@@ -92,7 +96,4 @@
         </div>
     </section>
     <!-- contact section end -->
-
-
-
 @endsection

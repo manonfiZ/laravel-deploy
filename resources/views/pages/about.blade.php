@@ -1,5 +1,10 @@
 @extends('base')
 
+@section('pageTitle')
+    A propos de nous
+@endsection
+
+
 @section('content')
     <x-breadcrumb pageTitle='À propos'></x-breadcrumb>
 
@@ -69,161 +74,8 @@
     </section>
     <!-- feature section end -->
 
-    <!-- testimonial section -->
-    <section class="testimonial-section sec-pad">
-        <div class="container">
-            <div class="testimonial-title centered">
-                <div class="section-title"><h2>Testimonials</h2></div>
-                <div class="title-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp </p></div>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/1.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/2.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/3.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/1.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/2.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/3.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/1.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/2.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-                <div class="testimonial-content">
-                    <div class="authore-info">
-                        <div class="img-box"><figure><img src="images/testimonial/3.png" alt=""></figure></div>
-                        <div class="author-meta">
-                            <h4>William Ayrton</h4>
-                            <span>Limo Advisor</span>
-                        </div>
-                    </div>
-                    <div class="text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mquelaud
-                    antiumes.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- testimonial section end -->
-
-    <!-- fact-counter -->
-    <section class="fact-counter centered">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12 counter-colmun">
-                    <div class="single-item">
-                        <article class="column wow fadeIn" data-wow-duration="0ms">
-                            <div class="count-outer"><span class="count-text" data-speed="1500" data-stop="25">0</span><span>+</span></div>
-                            <div class="text">Years Experience</div>
-                        </article>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 counter-colmun">
-                    <div class="single-item">
-                        <article class="column wow fadeIn" data-wow-duration="0ms">
-                            <div class="count-outer"><span class="count-text" data-speed="1500" data-stop="45">0</span><span>+</span></div>
-                            <div class="text">Awards Win</div>
-                        </article>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 counter-colmun">
-                    <div class="single-item">
-                        <article class="column wow fadeIn" data-wow-duration="0ms">
-                            <div class="count-outer"><span class="count-text" data-speed="1500" data-stop="1250">0</span><span>+</span></div>
-                            <div class="text">Happy Customers</div>
-                        </article>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 counter-colmun">
-                    <div class="single-item">
-                        <article class="column wow fadeIn" data-wow-duration="0ms">
-                            <div class="count-outer"><span class="count-text" data-speed="1500" data-stop="150">0</span><span>+</span></div>
-                            <div class="text">Our Expert Staffs</div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- fact-counter section end -->
-
     <!-- team section -->
-    <section class="our-team sec-pad">
+    {{-- <section class="our-team sec-pad">
         <div class="container">
             <div class="team-title centered">
                 <div class="section-title"><h2>Our Experts</h2></div>
@@ -391,6 +243,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- team section end -->
 @endsection
