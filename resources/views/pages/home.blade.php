@@ -166,6 +166,8 @@
         </div>
     </section>
     <!-- feature section end -->
+
+
     <!-- service section -->
     <section class="service-section">
         <div class="container-fullid">
@@ -202,44 +204,100 @@
     </section>
     <!-- feature section end -->
 
-    <!-- call-back-section -->
-    <section class="call-back sec-pad">
+      <!-- fact-counter -->
+      <section class="fact-counter centered">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-12 col-xs-12 colmun">
-                    <div class="call-back-content">
-                        <div class="call-back-title">
-                            <div class="section-title"><h2>Nous contacter</h2></div>
-                            {{-- <div class="text"><p>Voulez-vous prendre rendez-vous, avez-vous une préoccupation? écrivez nous, nous vous répondrons dans un bref delai.</p></div> --}}
+                <div class="col-md-3 col-sm-6 col-xs-12 counter-colmun">
+                    <div class="single-item">
+                        <article class="column wow fadeIn" data-wow-duration="0ms">
+                            <div class="count-outer"><span class="count-text" data-speed="1500" data-stop="25">0</span><span>+</span></div>
+                            <div class="text">Years Experience</div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 counter-colmun">
+                    <div class="single-item">
+                        <article class="column wow fadeIn" data-wow-duration="0ms">
+                            <div class="count-outer"><span class="count-text" data-speed="1500" data-stop="45">0</span><span>+</span></div>
+                            <div class="text">Awards Win</div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 counter-colmun">
+                    <div class="single-item">
+                        <article class="column wow fadeIn" data-wow-duration="0ms">
+                            <div class="count-outer"><span class="count-text" data-speed="1500" data-stop="1250">0</span><span>+</span></div>
+                            <div class="text">Happy Customers</div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 counter-colmun">
+                    <div class="single-item">
+                        <article class="column wow fadeIn" data-wow-duration="0ms">
+                            <div class="count-outer"><span class="count-text" data-speed="1500" data-stop="150">0</span><span>+</span></div>
+                            <div class="text">Our Expert Staffs</div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fact-counter section end -->
+
+
+    <!-- news section -->
+    <section class="news-section sec-pad">
+        <div class="container">
+            <div class="news-title centered">
+                <div class="section-title"><h2>Nos derniers articles</h2></div>
+                <div class="title-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp </p></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 news-colmun">
+                    <div class="single-item wow fadeInUp animated animated">
+                        <div class="img-box"><a href="blog-details.html"><figure><img src="images/news/1.jpg" alt=""></figure></a></div>
+                        <div class="news-content">
+                            <div class="date">25 <div class="text">Feb</div></div>
+                            <ul class="meta">
+                                <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                                <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
+                                <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
+                            </ul>
+                            <h4><a href="blog-details.html">Cras sed elit sit amet dui tem.</a></h4>
                         </div>
-                        <div class="form-area">
-                            <form id="contact-form" name="contact_form" class="default-form" action="{{route('contact-post')}}" method="post">
-                                @csrf
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="name" value="" placeholder="Votre nom" required>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="email" name="email" value="" placeholder="Votre email" required>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="phone" value="" placeholder="Votre numéro de téléphone">
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="subject" value="" placeholder="L'objet de votre message" required>
-                                    </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <textarea style="min-height: 100px !important;" placeholder="Votre message" name="message" required></textarea>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn-one style-one radi" data-loading-text="Please wait...">Envoyer</button>
-                            </form>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 news-colmun">
+                    <div class="single-item wow fadeInUp animated animated">
+                        <div class="img-box"><a href="blog-details.html"><figure><img src="images/news/2.jpg" alt=""></figure></a></div>
+                        <div class="news-content">
+                            <div class="date">25 <div class="text">Feb</div></div>
+                            <ul class="meta">
+                                <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                                <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
+                                <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
+                            </ul>
+                            <h4><a href="blog-details.html">In gravida eros in risus placerat.</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 news-colmun">
+                    <div class="single-item wow fadeInUp animated animated">
+                        <div class="img-box"><a href="blog-details.html"><figure><img src="images/news/3.jpg" alt=""></figure></a></div>
+                        <div class="news-content">
+                            <div class="date">25 <div class="text">Feb</div></div>
+                            <ul class="meta">
+                                <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                                <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
+                                <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
+                            </ul>
+                            <h4><a href="blog-details.html">Finibus Bonorum Malor In grav.</a></h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- call-back-section end -->
-
+    <!-- news section end -->
 @endsection

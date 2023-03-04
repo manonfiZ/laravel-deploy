@@ -6,12 +6,14 @@
         $indexClass = '';
         $contactClass = '';
         $aboutClass = '';
+        $blogClass = '';
         $serviceClass = '';
 
         if ($currentRoute == 'index') $indexClass = 'current';
         if ($currentRoute == 'contact') $contactClass = 'current';
         if ($currentRoute == 'about') $aboutClass = 'current';
         if ($currentRoute == 'services') $serviceClass = 'current';
+        if ($currentRoute == 'blog' || $currentRoute == 'blog-details') $blogClass = 'current';
 
     @endphp
 
@@ -62,12 +64,8 @@
                                     
                                     <li class="{{$serviceClass}}"><a href="{{ route('services') }}">Nos services</a>
                                     </li>
-                                    {{-- <li class="dropdown"><a href="#">Nos services</a>
-                                        <ul>
-                                            <li><a href="service.html">Our Service</a></li>
-                                            <li><a href="service-details.html">Service Details</a></li>
-                                        </ul>
-                                    </li> --}}
+                                    <li class="{{$blogClass}}"><a href="{{route('blog')}}">Blog</a>
+                                    </li>
                                     <li class="{{$contactClass}}"><a href="{{ route('contact') }}">Nous contacter</a>
                                     </li>
                                 </ul>
@@ -106,6 +104,8 @@
                                     <li class="{{$aboutClass}}"><a href="{{ route('about') }}">À propos de nous</a>
                                     </li>
                                     <li class="{{$serviceClass}}"><a href="{{ route('services') }}">Nos services</a>
+                                    </li>
+                                    <li class="{{$blogClass}}"><a href="{{route('blog')}}">Blog</a>
                                     </li>
                                     <li class="{{$contactClass}}"><a href="{{route('contact')}}">Nous contacter</a>
                                     </li>

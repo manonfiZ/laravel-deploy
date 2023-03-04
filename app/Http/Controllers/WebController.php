@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\MessageRequest;
+use App\akEminenceGroup\Messages\Requests\MessageRequest;
 use App\Mail\NewMessage;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class WebController extends Controller
@@ -20,8 +19,17 @@ class WebController extends Controller
     public function contact() {
         return view('pages.contact');
     }
+
     public function services() {
         return view('pages.services');
+    }
+    
+    public function blog() {
+        return view('pages.blog');
+    }
+
+    public function blogDetails() {
+        return view('pages.blog-details');
     }
 
     public function contactForm(MessageRequest $request) {

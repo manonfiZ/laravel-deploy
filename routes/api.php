@@ -17,3 +17,38 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::group(['namespace' => 'App\Http\Controllers'], function() {
+    // Auth
+    Route::group(['prefix' => 'auth'], function() {
+        Route::post('login', 'AuthController@authenticate');
+        Route::group(['middleware' => 'auth:sanctum'], function() {
+            Route::get('logout', 'AuthController@logout');
+        });
+    });
+
+    // Articles
+    Route::get('articles', 'ArticleController@all');
+    Route::group(['prefix' => 'article'], function() {
+
+        Route::group(['middleware' => 'auth:sanctum'], function() {
+            Route::post('', 'ArticleController@create');
+        });
+        Route::get('{slug}', 'ArticleController@findBySlug');
+    });
+
+
+    // Categories
+    Route::get('categories', 'CategoryController@all');
+
+    Route::group(['prefix' => 'category'], function() {
+
+        Route::group(['middleware' => 'auth:sanctum'], function() {
+            Route::post('', 'CategoryController@create');
+            Route::put('{id}', 'CategoryController@update');
+            Route::delete('{id}', 'CategoryController@delete');
+        });
+        Route::get('{id}', 'CategoryController@findById');
+    });
+});
