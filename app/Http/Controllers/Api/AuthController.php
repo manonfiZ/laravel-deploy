@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\akEminenceGroup\Articles\Repository\Interfaces\ArticleRepositoryInterface;
 use App\akEminenceGroup\Users\Repositories\Interfaces\UserRepositoryInterface;
@@ -13,14 +13,15 @@ class AuthController extends ApiBaseController
     protected $articleRepo;
     /**
      */
-    public function __construct(UserRepositoryInterface $userRepo, ArticleRepositoryInterface $articleRepo) {
+    public function __construct(UserRepositoryInterface $userRepo, ArticleRepositoryInterface $articleRepo)
+    {
         $this->userRepo = $userRepo;
         $this->articleRepo = $articleRepo;
     }
 
-    public function authenticate(LoginRequest $request):JsonResponse
+    public function authenticate(LoginRequest $request): JsonResponse
     {
-        if(auth()->attempt($request->only('username', 'password'))) {
+        if (auth()->attempt($request->only('username', 'password'))) {
 
             $user = auth()->user();
             $token = $user->createToken(config('app.name'))->plainTextToken;
@@ -35,7 +36,7 @@ class AuthController extends ApiBaseController
 
         return $this->errorResponse(message: 'Données de connexion invalides.');
     }
-    
+
 
     public function logout(): JsonResponse
     {

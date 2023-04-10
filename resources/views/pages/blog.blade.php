@@ -14,97 +14,31 @@
                 <div class="col-md-8 col-sm-12 col-xs-12 content-side">
                     <div class="blog-content">
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-12 news-colmun">
-                                <div class="single-item wow fadeInUp animated animated">
-                                    <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/n1.jpg')}}" alt=""></figure></a></div>
-                                    <div class="news-content">
-                                        <div class="date">25 <div class="text">Feb</div></div>
-                                        <ul class="meta">
-                                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                            <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                            <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                                        </ul>
-                                        <h4><a href="{{ route('blog-details') }}">Cras sed elit sit amet dui tem.</a></h4>
+                            @foreach ($articles as $article)
+                                <div class="col-md-6 col-sm-6 col-xs-12 news-colmun">
+                                    <div class="single-item wow fadeInUp animated animated">
+                                        <div class="img-box"><a href="{{ route('blog-details', ['slug' => $article->slug])}}"><figure><img style="width: 370px !important; height: 250px !important;" src="{{ asset('storage/uploads/' . $article->cover)}}" alt=""></figure></a></div>
+                                        <div class="news-content">
+                                            <div class="date">{{ \Carbon\Carbon::parse($article->created_at)->format('d') }} <div class="text">{{ \Carbon\Carbon::parse($article->created_at)->format('M') }}</div></div>
+                                            <ul class="meta">
+                                                <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                                                {{-- <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
+                                                <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li> --}}
+                                            </ul>
+                                            <h4><a href="{{ route('blog-details', ['slug' => $article->slug])}}"> {{ $article->title}} </a></h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12 news-colmun">
-                                <div class="single-item wow fadeInUp animated animated">
-                                    <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/n2.jpg')}}" alt=""></figure></a></div>
-                                    <div class="news-content">
-                                        <div class="date">25 <div class="text">Feb</div></div>
-                                        <ul class="meta">
-                                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                            <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                            <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                                        </ul>
-                                        <h4><a href="{{ route('blog-details') }}">In gravida eros in risus placerat.</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12 news-colmun">
-                                <div class="single-item wow fadeInUp animated animated">
-                                    <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/n3.jpg')}}" alt=""></figure></a></div>
-                                    <div class="news-content">
-                                        <div class="date">25 <div class="text">Feb</div></div>
-                                        <ul class="meta">
-                                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                            <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                            <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                                        </ul>
-                                        <h4><a href="{{ route('blog-details') }}">Cras sed elit sit amet dui tem.</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12 news-colmun">
-                                <div class="single-item wow fadeInUp animated animated">
-                                    <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/n4.jpg')}}" alt=""></figure></a></div>
-                                    <div class="news-content">
-                                        <div class="date">25 <div class="text">Feb</div></div>
-                                        <ul class="meta">
-                                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                            <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                            <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                                        </ul>
-                                        <h4><a href="{{ route('blog-details') }}">In gravida eros in risus placerat.</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12 news-colmun">
-                                <div class="single-item wow fadeInUp animated animated">
-                                    <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/n5.jpg')}}" alt=""></figure></a></div>
-                                    <div class="news-content">
-                                        <div class="date">25 <div class="text">Feb</div></div>
-                                        <ul class="meta">
-                                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                            <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                            <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                                        </ul>
-                                        <h4><a href="{{ route('blog-details') }}">Cras sed elit sit amet dui tem.</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12 news-colmun">
-                                <div class="single-item wow fadeInUp animated animated">
-                                    <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/n6.jpg')}}" alt=""></figure></a></div>
-                                    <div class="news-content">
-                                        <div class="date">25 <div class="text">Feb</div></div>
-                                        <ul class="meta">
-                                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                            <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                            <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                                        </ul>
-                                        <h4><a href="{{ route('blog-details') }}">In gravida eros in risus placerat.</a></h4>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
+                        {{ $articles->links() }}
                         <ul class="link-btn">
-                            <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+
+                            {{-- <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
                             <li><a href="#" class="active">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li> --}}
                         </ul>
                     </div>
                 </div>
@@ -116,7 +50,7 @@
                                 <button><i class="fa fa-search"></i></button>
                             </div>
                         </div>
-                        <div class="sidebar-catagories sidebar-widget">
+                        {{-- <div class="sidebar-catagories sidebar-widget">
                             <div class="sidebar-title"><h4>Categories</h4></div>
                             <ul class="sidebar-list">
                                 <li><a href="#">All Services</a></li>
@@ -127,33 +61,19 @@
                                 <li><a href="#">Investment Marketing</a></li>
                                 <li><a href="#">Market Research</a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                         <div class="sidebar-post sidebar-widget">
                             <div class="sidebar-title"><h4>Latest Post</h4></div>
+                            @foreach ($latestArticles as $latestArticle)
                             <div class="single-post">
-                                <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/p1.jpg')}}" alt=""></figure></a></div>
-                                <div class="post-title"><h6><a href="{{ route('blog-details') }}">Totam Rem Aperiam Eaque Ipsa Quae ab Illo.</a></h6></div>
+                                <div class="img-box"><a href="{{ route('blog-details', ['slug' => $latestArticle->slug ]) }}"><figure><img style="width: 85px !important; height: 85px !important;" src="{{ asset('storage/uploads/' . $latestArticle->cover )}}" alt="article-cover"></figure></a></div>
+                                <div class="post-title"><h6><a href="{{ route('blog-details', ['slug' => $latestArticle->slug ]) }}">{{ $latestArticle->title }}</a></h6></div>
                                 <ul class="post-time">
                                     <li><i class="fa fa-calendar" aria-hidden="true"></i></li>
-                                    <li>02 Feb, 2017</li>
+                                    <li>{{ \Carbon\Carbon::parse($latestArticle->created_at)->format('d M Y') }}</li>
                                 </ul>
                             </div>
-                            <div class="single-post">
-                                <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/p2.jpg')}}" alt=""></figure></a></div>
-                                <div class="post-title"><h6><a href="{{ route('blog-details') }}">Totam Rem Aperiam Eaque Ipsa Quae ab Illo.</a></h6></div>
-                                <ul class="post-time">
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i></li>
-                                    <li>02 Feb, 2017</li>
-                                </ul>
-                            </div>
-                            <div class="single-post">
-                                <div class="img-box"><a href="{{ route('blog-details') }}"><figure><img src="{{asset('images/news/p3.jpg')}}" alt=""></figure></a></div>
-                                <div class="post-title"><h6><a href="{{ route('blog-details') }}">Totam Rem Aperiam Eaque Ipsa Quae ab Illo.</a></h6></div>
-                                <ul class="post-time">
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i></li>
-                                    <li>02 Feb, 2017</li>
-                                </ul>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
+
 use App\akEminenceGroup\Categories\Repositories\Interfaces\CategoryRepositoryInterface;
 use App\akEminenceGroup\Categories\Requests\AddOrEditCategoryRequest;
 use Illuminate\Http\JsonResponse;
@@ -50,10 +51,11 @@ class CategoryController extends ApiBaseController
     {
         $category = $this->categoryRepo->findById($id);
 
-        if ($category == null) return $this->errorResponse();
+        if ($category == null)
+            return $this->errorResponse();
 
         $category = $this->categoryRepo->update($request->all(), $category);
 
-        return  $this->successResponse($category);
+        return $this->successResponse($category);
     }
 }

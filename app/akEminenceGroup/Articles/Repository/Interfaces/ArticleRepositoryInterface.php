@@ -20,9 +20,8 @@ interface ArticleRepositoryInterface
     /**
      * find all categories
      *
-     * @return array
      */
-    public function findAll(): array;
+    public function findAll();
 
     /**
      * Find article by id
@@ -56,4 +55,6 @@ interface ArticleRepositoryInterface
      * @return boolean
      */
     public function delete(Article $article): bool;
+
+    public function getLatest(): Collection;
 }

@@ -33,11 +33,12 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
 
         $article->slug = Str::slug($article->title);
 
-        if($category !== null) $article->category()->associate($category);
+        if ($category !== null)
+            $article->category()->associate($category);
 
-        if(isset($data['cover']) && $data['cover'] instanceof UploadedFile) 
+        if (isset($data['cover']) && $data['cover'] instanceof UploadedFile)
             $article->cover = $this->upload($data['cover']);
-        
+
         $article->save();
 
         return $article;
@@ -45,11 +46,10 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
 
     /**
      * find all categories
-     * @return \Illuminate\Support\array
      */
-    public function findAll(): array
+    public function findAll()
     {
-        return $this->model->paginate(10)->all();
+        return $this->model->paginate(4);
     }
 
     /**
@@ -60,7 +60,7 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
      */
     public function findById(int $id): ?Article
     {
-        return  $this->findOneBy(['id' => $id]);
+        return $this->findOneBy(['id' => $id]);
     }
 
     /**
@@ -88,13 +88,20 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
         return $article->delete();
     }
 
-	/**
-	 * Find article by slug
-	 *
-	 * @param string $slug
-	 * @return Article|null
-	 */
-	public function findBySlug(string $slug): ?Article {
+    /**
+     * Find article by slug
+     *
+     * @param string $slug
+     * @return Article|null
+     */
+    public function findBySlug(string $slug): ?Article
+    {
         return $this->findOneBy(['slug' => $slug]);
+    }
+	/**
+	 * @return \Illuminate\Support\Collection
+	 */
+	public function getLatest(): \Illuminate\Support\Collection {
+        return $this->model->latest()->limit(3)->get();
 	}
 }

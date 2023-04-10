@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::group(['namespace' => 'App\Http\Controllers'], function() {
+Route::group(['namespace' => 'App\Http\Controllers\Api'], function() {
     // Auth
     Route::group(['prefix' => 'auth'], function() {
         Route::post('login', 'AuthController@authenticate');
@@ -30,7 +30,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
 
     // Articles
     Route::get('articles', 'ArticleController@all');
-    Route::group(['prefix' => 'article'], function() {
+    Route::group(['prefix' => 'articles'], function() {
 
         Route::group(['middleware' => 'auth:sanctum'], function() {
             Route::post('', 'ArticleController@create');
@@ -42,7 +42,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
     // Categories
     Route::get('categories', 'CategoryController@all');
 
-    Route::group(['prefix' => 'category'], function() {
+    Route::group(['prefix' => 'categories'], function() {
 
         Route::group(['middleware' => 'auth:sanctum'], function() {
             Route::post('', 'CategoryController@create');

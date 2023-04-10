@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\WebController;
+use App\Http\Controllers\Web\WebController;
+use Faker\Provider\Lorem;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,5 +21,10 @@ Route::get('/about', [WebController::class, 'about'])->name('about');
 Route::get('/contact', [WebController::class, 'contact'])->name('contact');
 Route::get('/services', [WebController::class, 'services'])->name('services');
 Route::get('/blog', [WebController::class, 'blog'])->name('blog');
-Route::get('/article', [WebController::class, 'blogDetails'])->name('blog-details');
+Route::get('/articles/{slug}', [WebController::class, 'blogDetails'])->name('blog-details');
 Route::post('/contact', [WebController::class, 'contactForm'])->name('contact-post');
+
+
+Route::get('admin/{all?}', function() {
+    return view('admin');
+})->where('all', '[\/\w\.-]*');

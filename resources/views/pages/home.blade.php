@@ -254,48 +254,23 @@
                 <div class="title-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp </p></div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12 news-colmun">
-                    <div class="single-item wow fadeInUp animated animated">
-                        <div class="img-box"><a href="blog-details.html"><figure><img src="images/news/1.jpg" alt=""></figure></a></div>
-                        <div class="news-content">
-                            <div class="date">25 <div class="text">Feb</div></div>
-                            <ul class="meta">
-                                <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                            </ul>
-                            <h4><a href="blog-details.html">Cras sed elit sit amet dui tem.</a></h4>
+                @foreach ($articles as $article)
+                    <div class="col-md-4 col-sm-6 col-xs-12 news-colmun">
+                        <div class="single-item wow fadeInUp animated animated">
+                            <div class="img-box"><a href="{{ route('blog-details', ['slug' => $article->slug])}}"><figure><img style="width: 370px !important; height: 250px !important;" src="{{ asset('storage/uploads/' . $article->cover)}}" alt=""></figure></a></div>
+                            <div class="news-content">
+                                <div class="date">{{ \Carbon\Carbon::parse($article->created_at)->format('d') }} <div class="text">{{ \Carbon\Carbon::parse($article->created_at)->locale('fr')->format('M') }}</div></div>
+                                <ul class="meta">
+                                    <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                                    {{-- <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
+                                    <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li> --}}
+                                </ul>
+                                <h4><a href="{{ route('blog-details', ['slug' => $article->slug])}}"> {{ $article->title}} </a></h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 news-colmun">
-                    <div class="single-item wow fadeInUp animated animated">
-                        <div class="img-box"><a href="blog-details.html"><figure><img src="images/news/2.jpg" alt=""></figure></a></div>
-                        <div class="news-content">
-                            <div class="date">25 <div class="text">Feb</div></div>
-                            <ul class="meta">
-                                <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                            </ul>
-                            <h4><a href="blog-details.html">In gravida eros in risus placerat.</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 news-colmun">
-                    <div class="single-item wow fadeInUp animated animated">
-                        <div class="img-box"><a href="blog-details.html"><figure><img src="images/news/3.jpg" alt=""></figure></a></div>
-                        <div class="news-content">
-                            <div class="date">25 <div class="text">Feb</div></div>
-                            <ul class="meta">
-                                <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
-                                <li><i class="fa fa-heart-o" aria-hidden="true"></i>350</li>
-                                <li><i class="fa fa-comments-o" aria-hidden="true"></i>30</li>
-                            </ul>
-                            <h4><a href="blog-details.html">Finibus Bonorum Malor In grav.</a></h4>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+              
             </div>
         </div>
     </section>
