@@ -21,14 +21,14 @@ class AuthController extends ApiBaseController
 
     public function authenticate(LoginRequest $request): JsonResponse
     {
-        if (auth()->attempt($request->only('username', 'password'))) {
+        if (auth()->attempt($request->only('email', 'password'))) {
 
             $user = auth()->user();
             $token = $user->createToken(config('app.name'))->plainTextToken;
 
             $data = [
                 'user' => $user,
-                'access_token' => $token,
+                'token' => $token,
             ];
 
             return $this->successResponse(data: $data);
@@ -42,9 +42,9 @@ class AuthController extends ApiBaseController
     {
         $user = request()->user();
 
-        dd($user->token);
+        $user->currentAccessToken()->delete();
 
-        return $this->errorResponse(message: 'Déconnexion avec succès.');
+        return $this->successResponse(message: 'Déconnexion avec succès.');
     }
 
 }

@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
 
 
         // for ($i=0; $i < 12 ; $i++) { 
-            
+
         //     Article::create([
         //         'title' => 'Article '. $i,
         //         'slug' => Str::slug('Article '. $i),
@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         //         'cover' => fake()->imageUrl()
         //     ]);
         // }
-        
+
         User::create([
             'name' => 'Super Admin',
             'username' => 'admin',

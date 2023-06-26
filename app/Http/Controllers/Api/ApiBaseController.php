@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 
 class ApiBaseController extends Controller
@@ -11,8 +10,7 @@ class ApiBaseController extends Controller
         $data = null,
         string $message = 'Success',
         int $statusCode = 200
-    ): JsonResponse
-    {
+    ): JsonResponse {
         return response()->json(
             [
                 'success' => true,
@@ -27,8 +25,7 @@ class ApiBaseController extends Controller
         ?array $data = null,
         string $message = 'Error',
         int $statusCode = 400
-    ): JsonResponse
-    {
+    ): JsonResponse {
         return response()->json(
             [
                 'success' => false,

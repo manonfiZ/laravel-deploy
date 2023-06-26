@@ -9,7 +9,7 @@ class LoginRequest extends BaseFormRequest
     public function rules(): array
     {
         return [
-            'username' => 'required',
+            'email' => 'required|email',
             'password' => 'required',
         ];
     }

@@ -49,7 +49,7 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
      */
     public function findAll()
     {
-        return $this->model->paginate(4);
+        return $this->model->with(['category'])->paginate(4);
     }
 
     /**

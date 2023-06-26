@@ -1,49 +1,59 @@
 <?php
 namespace App\akEminenceGroup\Categories\Repositories;
+
 use App\akEminenceGroup\Base\Repositories\BaseRepository;
 use App\akEminenceGroup\Categories\Category;
 use App\akEminenceGroup\Categories\Repositories\Interfaces\CategoryRepositoryInterface;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
-class CategoryRepository extends BaseRepository implements CategoryRepositoryInterface {
-    
-    /**
-     */
-    public function __construct(Category $model) {
-        parent::__construct($model);
-    }
-    
+class CategoryRepository extends BaseRepository implements CategoryRepositoryInterface
+{
+
+	/**
+	 */
+	public function __construct(Category $model)
+	{
+		parent::__construct($model);
+	}
+
 	/**
 	 * Create new category
 	 *
 	 * @param array $data
 	 * @return Category
 	 */
-	public function create(array $data): Category {
+	public function create(array $data): Category
+	{
 		$category = $this->model->make($data);
 		$category->save();
 
 		return $category;
 	}
-	
+
 	/**
 	 * find all categories
 	 * @return \Illuminate\Support\Collection
 	 */
-	public function findAll(): Collection {
-		return $this->model->all();
+	public function findAll(int $page = 1, int $perPage = 10, bool $paginate = true): LengthAwarePaginator|Collection
+	{
+		if ($paginate) {
+			return Category::latest()->paginate(perPage: $perPage, page: $page);
+		}
+		return Category::latest()->all();
 	}
-	
+
 	/**
 	 * Find category by id
 	 *
 	 * @param int $id
 	 * @return Category|null
 	 */
-	public function findById(int $id): ?Category {
-		return  $this->findOneBy(['id' => $id]);
+	public function findById(int $id): ?Category
+	{
+		return $this->findOneBy(['id' => $id]);
 	}
-	
+
 	/**
 	 * Update an existing category
 	 *
@@ -51,19 +61,21 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
 	 * @param Category $category
 	 * @return Category
 	 */
-	public function update(array $data, Category $category): Category {
+	public function update(array $data, Category $category): Category
+	{
 		$category->update($data);
 
 		return $category;
 	}
-	
+
 	/**
 	 * Delete category
 	 *
 	 * @param Category $category
 	 * @return bool
 	 */
-	public function delete(Category $category): bool {
+	public function delete(Category $category): bool
+	{
 		return $category->delete();
 	}
 }

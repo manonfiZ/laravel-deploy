@@ -25,9 +25,9 @@ class CategoryController extends ApiBaseController
         return $this->successResponse($category);
     }
 
-    public function all(): JsonResponse
+    public function all(Request $request): JsonResponse
     {
-        $categories = $this->categoryRepo->findAll();
+        $categories = $this->categoryRepo->findAll($request->get('page', 1), $request->get('per_page', 10));
 
         return $this->successResponse($categories);
     }

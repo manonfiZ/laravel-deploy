@@ -14,25 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
-
-Route::group(['namespace' => 'App\Http\Controllers\Api'], function() {
+Route::group(['namespace' => 'App\Http\Controllers\Api'], function () {
     // Auth
-    Route::group(['prefix' => 'auth'], function() {
+    Route::group(['prefix' => 'auth'], function () {
         Route::post('login', 'AuthController@authenticate');
-        Route::group(['middleware' => 'auth:sanctum'], function() {
-            Route::get('logout', 'AuthController@logout');
+        Route::group(['middleware' => 'auth:sanctum'], function () {
+            Route::post('logout', 'AuthController@logout');
         });
     });
 
     // Articles
     Route::get('articles', 'ArticleController@all');
-    Route::group(['prefix' => 'articles'], function() {
+    Route::group(['prefix' => 'articles'], function () {
 
-        Route::group(['middleware' => 'auth:sanctum'], function() {
+        Route::group(['middleware' => 'auth:sanctum'], function () {
             Route::post('', 'ArticleController@create');
         });
         Route::get('{slug}', 'ArticleController@findBySlug');
@@ -42,9 +38,9 @@ Route::group(['namespace' => 'App\Http\Controllers\Api'], function() {
     // Categories
     Route::get('categories', 'CategoryController@all');
 
-    Route::group(['prefix' => 'categories'], function() {
+    Route::group(['prefix' => 'categories'], function () {
 
-        Route::group(['middleware' => 'auth:sanctum'], function() {
+        Route::group(['middleware' => 'auth:sanctum'], function () {
             Route::post('', 'CategoryController@create');
             Route::put('{id}', 'CategoryController@update');
             Route::delete('{id}', 'CategoryController@delete');

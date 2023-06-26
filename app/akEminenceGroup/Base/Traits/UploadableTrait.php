@@ -10,9 +10,9 @@ trait UploadableTrait {
 
         $filename = Str::random() . '.' . $file->getClientOriginalExtension();
 
-        $file->storeAs( 'uploads' , $filename, 'uploads');
+        $savedName = $file->storeAs( 'uploads' , $filename, 'uploads');
 
-        return $filename;
+        return $savedName;
     }
 
 }

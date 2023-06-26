@@ -2,9 +2,11 @@
 namespace App\akEminenceGroup\Categories\Repositories\Interfaces;
 
 use App\akEminenceGroup\Categories\Category;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
-interface CategoryRepositoryInterface {
+interface CategoryRepositoryInterface
+{
     /**
      * Create new category
      *
@@ -18,7 +20,7 @@ interface CategoryRepositoryInterface {
      *
      * @return Collection
      */
-    public function findAll(): Collection;
+    public function findAll(int $page = 1, int $perPage = 10, bool $paginate = true): LengthAwarePaginator|Collection;
 
     /**
      * Find category by id
